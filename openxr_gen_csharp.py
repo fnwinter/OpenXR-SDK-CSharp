@@ -16,10 +16,16 @@ def find_enum(data):
     return _r.findall(data)
 
 def find_macro(data):
-    pass
+    _r = re.compile("#define(?:.*\\\n.*|.*)", re.MULTILINE)
+    return _r.findall(data)
+
+def find_const_values(data):
+    _r = re.compile("static const .*", re.MULTILINE)
+    return _r.findall(data)
 
 def find_function(data):
-    pass
+    _r = re.compile("XRAPI_ATTR[^;]*;", re.MULTILINE)
+    return _r.findall(data)
 
 if __name__ == '__main__':
     print("# generate c sharp file for openxr")
