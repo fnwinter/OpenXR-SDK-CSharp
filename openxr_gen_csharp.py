@@ -3,12 +3,14 @@
 import os
 import re
 
+from structure import gen_structure
+
 SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
 
 OPENXR_H_FILE = os.path.join(SCRIPT_PATH, "c", "openxr.h")
 
 def find_struct(data):
-    _r = re.compile("typedef[ +]struct[ +][^{]+{[^}]+}.*;", re.MULTILINE)
+    _r = re.compile("typedef[ +]struct[ +][^{|^#]+{[^}]+}.*;", re.MULTILINE)
     return _r.findall(data)
 
 def find_enum(data):
@@ -30,6 +32,10 @@ def find_function(data):
 if __name__ == '__main__':
     print("# generate c sharp file for openxr")
 
-    data = None
+    data = None 
     with open(OPENXR_H_FILE) as f:
         data = "".join(f.readlines())
+
+        structures = find_struct(data)
+        for s in structures:
+            gen_structure(s)
