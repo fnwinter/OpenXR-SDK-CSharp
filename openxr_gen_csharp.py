@@ -3,7 +3,8 @@
 import os
 import re
 
-from structure import gen_structure
+from gen_structure import gen_structure
+from gen_enum import gen_enum
 
 SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -38,4 +39,8 @@ if __name__ == '__main__':
 
         structures = find_struct(data)
         for s in structures:
-            gen_structure(s)
+            #gen_structure(s)
+            pass
+
+        enums = find_enum(data)
+        gen_enum(enums)
