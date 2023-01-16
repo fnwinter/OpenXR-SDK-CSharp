@@ -1,0 +1,14 @@
+// This file is auto-generated
+
+namespace fn.OpenXR.Common
+{
+    {%- for item in render_data %}
+    [StructLayout(LayoutKind.Sequential)]
+    struct {{ item[0] }}
+    {
+    {% for value in item[1] %}
+        {{ value[0] }} {{ value[1] }}{{ "," if not loop.last }}
+    {% endfor %}
+    }
+    {% endfor %}
+}
