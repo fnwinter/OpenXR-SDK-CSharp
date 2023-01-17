@@ -5,6 +5,7 @@ import re
 
 from gen_structure import gen_structure
 from gen_enum import gen_enum
+from gen_macro import gen_macro
 
 SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
 OPENXR_HEADER_FILE = os.path.join(SCRIPT_PATH, "c", "openxr.h")
@@ -18,7 +19,7 @@ def find_enum(data):
     return _r.findall(data)
 
 def find_macro(data):
-    _r = re.compile("#define(?:.*\\\n.*|.*)", re.MULTILINE)
+    _r = re.compile("#define (\w+)( +)(.*)", re.MULTILINE)
     return _r.findall(data)
 
 def find_const_values(data):
@@ -39,3 +40,5 @@ if __name__ == '__main__':
         gen_structure(find_struct(lines))
 
         gen_enum(find_enum(lines))
+
+        gen_macro(find_macro(lines))
