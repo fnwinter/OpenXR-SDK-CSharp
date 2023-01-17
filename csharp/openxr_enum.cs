@@ -2,7 +2,6 @@
 
 namespace fn.OpenXR.Common
 {
-    
     enum XrResult
     {
         XR_SUCCESS = 0,
@@ -91,9 +90,8 @@ namespace fn.OpenXR.Common
         XR_ERROR_SPATIAL_ANCHOR_NAME_NOT_FOUND_MSFT = -1000142001,
         XR_ERROR_SPATIAL_ANCHOR_NAME_INVALID_MSFT = -1000142002,
         XR_RESULT_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrStructureType
     {
         XR_TYPE_UNKNOWN = 0,
@@ -341,17 +339,15 @@ namespace fn.OpenXR.Common
         XR_TYPE_SWAPCHAIN_IMAGE_VULKAN2_KHR = XR_TYPE_SWAPCHAIN_IMAGE_VULKAN_KHR,
         XR_TYPE_GRAPHICS_REQUIREMENTS_VULKAN2_KHR = XR_TYPE_GRAPHICS_REQUIREMENTS_VULKAN_KHR,
         XR_STRUCTURE_TYPE_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrFormFactor
     {
         XR_FORM_FACTOR_HEAD_MOUNTED_DISPLAY = 1,
         XR_FORM_FACTOR_HANDHELD_DISPLAY = 2,
         XR_FORM_FACTOR_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrViewConfigurationType
     {
         XR_VIEW_CONFIGURATION_TYPE_PRIMARY_MONO = 1,
@@ -359,18 +355,16 @@ namespace fn.OpenXR.Common
         XR_VIEW_CONFIGURATION_TYPE_PRIMARY_QUAD_VARJO = 1000037000,
         XR_VIEW_CONFIGURATION_TYPE_SECONDARY_MONO_FIRST_PERSON_OBSERVER_MSFT = 1000054000,
         XR_VIEW_CONFIGURATION_TYPE_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrEnvironmentBlendMode
     {
         XR_ENVIRONMENT_BLEND_MODE_OPAQUE = 1,
         XR_ENVIRONMENT_BLEND_MODE_ADDITIVE = 2,
         XR_ENVIRONMENT_BLEND_MODE_ALPHA_BLEND = 3,
         XR_ENVIRONMENT_BLEND_MODE_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrReferenceSpaceType
     {
         XR_REFERENCE_SPACE_TYPE_VIEW = 1,
@@ -379,9 +373,8 @@ namespace fn.OpenXR.Common
         XR_REFERENCE_SPACE_TYPE_UNBOUNDED_MSFT = 1000038000,
         XR_REFERENCE_SPACE_TYPE_COMBINED_EYE_VARJO = 1000121000,
         XR_REFERENCE_SPACE_TYPE_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrActionType
     {
         XR_ACTION_TYPE_BOOLEAN_INPUT = 1,
@@ -390,18 +383,16 @@ namespace fn.OpenXR.Common
         XR_ACTION_TYPE_POSE_INPUT = 4,
         XR_ACTION_TYPE_VIBRATION_OUTPUT = 100,
         XR_ACTION_TYPE_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrEyeVisibility
     {
         XR_EYE_VISIBILITY_BOTH = 0,
         XR_EYE_VISIBILITY_LEFT = 1,
         XR_EYE_VISIBILITY_RIGHT = 2,
         XR_EYE_VISIBILITY_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSessionState
     {
         XR_SESSION_STATE_UNKNOWN = 0,
@@ -414,9 +405,8 @@ namespace fn.OpenXR.Common
         XR_SESSION_STATE_LOSS_PENDING = 7,
         XR_SESSION_STATE_EXITING = 8,
         XR_SESSION_STATE_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrObjectType
     {
         XR_OBJECT_TYPE_UNKNOWN = 0,
@@ -441,35 +431,31 @@ namespace fn.OpenXR.Common
         XR_OBJECT_TYPE_SPATIAL_ANCHOR_STORE_CONNECTION_MSFT = 1000142000,
         XR_OBJECT_TYPE_PASSTHROUGH_HTC = 1000317000,
         XR_OBJECT_TYPE_MAX_ENUM = 0x7FFFFFFF
-        
     }
-    
+
     enum XrVisibilityMaskTypeKHR
     {
         XR_VISIBILITY_MASK_TYPE_HIDDEN_TRIANGLE_MESH_KHR = 1,
         XR_VISIBILITY_MASK_TYPE_VISIBLE_TRIANGLE_MESH_KHR = 2,
         XR_VISIBILITY_MASK_TYPE_LINE_LOOP_KHR = 3,
         XR_VISIBILITY_MASK_TYPE_MAX_ENUM_KHR = 0x7FFFFFFF
-        
     }
-    
+
     enum XrPerfSettingsDomainEXT
     {
         XR_PERF_SETTINGS_DOMAIN_CPU_EXT = 1,
         XR_PERF_SETTINGS_DOMAIN_GPU_EXT = 2,
         XR_PERF_SETTINGS_DOMAIN_MAX_ENUM_EXT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrPerfSettingsSubDomainEXT
     {
         XR_PERF_SETTINGS_SUB_DOMAIN_COMPOSITING_EXT = 1,
         XR_PERF_SETTINGS_SUB_DOMAIN_RENDERING_EXT = 2,
         XR_PERF_SETTINGS_SUB_DOMAIN_THERMAL_EXT = 3,
         XR_PERF_SETTINGS_SUB_DOMAIN_MAX_ENUM_EXT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrPerfSettingsLevelEXT
     {
         XR_PERF_SETTINGS_LEVEL_POWER_SAVINGS_EXT = 0,
@@ -477,18 +463,16 @@ namespace fn.OpenXR.Common
         XR_PERF_SETTINGS_LEVEL_SUSTAINED_HIGH_EXT = 50,
         XR_PERF_SETTINGS_LEVEL_BOOST_EXT = 75,
         XR_PERF_SETTINGS_LEVEL_MAX_ENUM_EXT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrPerfSettingsNotificationLevelEXT
     {
         XR_PERF_SETTINGS_NOTIF_LEVEL_NORMAL_EXT = 0,
         XR_PERF_SETTINGS_NOTIF_LEVEL_WARNING_EXT = 25,
         XR_PERF_SETTINGS_NOTIF_LEVEL_IMPAIRED_EXT = 75,
         XR_PERF_SETTINGS_NOTIFICATION_LEVEL_MAX_ENUM_EXT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrBlendFactorFB
     {
         XR_BLEND_FACTOR_ZERO_FB = 0,
@@ -498,25 +482,22 @@ namespace fn.OpenXR.Common
         XR_BLEND_FACTOR_DST_ALPHA_FB = 4,
         XR_BLEND_FACTOR_ONE_MINUS_DST_ALPHA_FB = 5,
         XR_BLEND_FACTOR_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSpatialGraphNodeTypeMSFT
     {
         XR_SPATIAL_GRAPH_NODE_TYPE_STATIC_MSFT = 1,
         XR_SPATIAL_GRAPH_NODE_TYPE_DYNAMIC_MSFT = 2,
         XR_SPATIAL_GRAPH_NODE_TYPE_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrHandEXT
     {
         XR_HAND_LEFT_EXT = 1,
         XR_HAND_RIGHT_EXT = 2,
         XR_HAND_MAX_ENUM_EXT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrHandJointEXT
     {
         XR_HAND_JOINT_PALM_EXT = 0,
@@ -546,25 +527,22 @@ namespace fn.OpenXR.Common
         XR_HAND_JOINT_LITTLE_DISTAL_EXT = 24,
         XR_HAND_JOINT_LITTLE_TIP_EXT = 25,
         XR_HAND_JOINT_MAX_ENUM_EXT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrHandJointSetEXT
     {
         XR_HAND_JOINT_SET_DEFAULT_EXT = 0,
         XR_HAND_JOINT_SET_HAND_WITH_FOREARM_ULTRALEAP = 1000149000,
         XR_HAND_JOINT_SET_MAX_ENUM_EXT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrHandPoseTypeMSFT
     {
         XR_HAND_POSE_TYPE_TRACKED_MSFT = 0,
         XR_HAND_POSE_TYPE_REFERENCE_OPEN_PALM_MSFT = 1,
         XR_HAND_POSE_TYPE_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrReprojectionModeMSFT
     {
         XR_REPROJECTION_MODE_DEPTH_MSFT = 1,
@@ -572,17 +550,15 @@ namespace fn.OpenXR.Common
         XR_REPROJECTION_MODE_PLANAR_MANUAL_MSFT = 3,
         XR_REPROJECTION_MODE_ORIENTATION_ONLY_MSFT = 4,
         XR_REPROJECTION_MODE_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrHandJointsMotionRangeEXT
     {
         XR_HAND_JOINTS_MOTION_RANGE_UNOBSTRUCTED_EXT = 1,
         XR_HAND_JOINTS_MOTION_RANGE_CONFORMING_TO_CONTROLLER_EXT = 2,
         XR_HAND_JOINTS_MOTION_RANGE_MAX_ENUM_EXT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSceneComputeFeatureMSFT
     {
         XR_SCENE_COMPUTE_FEATURE_PLANE_MSFT = 1,
@@ -591,18 +567,16 @@ namespace fn.OpenXR.Common
         XR_SCENE_COMPUTE_FEATURE_COLLIDER_MESH_MSFT = 4,
         XR_SCENE_COMPUTE_FEATURE_SERIALIZE_SCENE_MSFT = 1000098000,
         XR_SCENE_COMPUTE_FEATURE_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSceneComputeConsistencyMSFT
     {
         XR_SCENE_COMPUTE_CONSISTENCY_SNAPSHOT_COMPLETE_MSFT = 1,
         XR_SCENE_COMPUTE_CONSISTENCY_SNAPSHOT_INCOMPLETE_FAST_MSFT = 2,
         XR_SCENE_COMPUTE_CONSISTENCY_OCCLUSION_OPTIMIZED_MSFT = 3,
         XR_SCENE_COMPUTE_CONSISTENCY_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrMeshComputeLodMSFT
     {
         XR_MESH_COMPUTE_LOD_COARSE_MSFT = 1,
@@ -610,9 +584,8 @@ namespace fn.OpenXR.Common
         XR_MESH_COMPUTE_LOD_FINE_MSFT = 3,
         XR_MESH_COMPUTE_LOD_UNLIMITED_MSFT = 4,
         XR_MESH_COMPUTE_LOD_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSceneComponentTypeMSFT
     {
         XR_SCENE_COMPONENT_TYPE_INVALID_MSFT = -1,
@@ -622,9 +595,8 @@ namespace fn.OpenXR.Common
         XR_SCENE_COMPONENT_TYPE_COLLIDER_MESH_MSFT = 4,
         XR_SCENE_COMPONENT_TYPE_SERIALIZED_SCENE_FRAGMENT_MSFT = 1000098000,
         XR_SCENE_COMPONENT_TYPE_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSceneObjectTypeMSFT
     {
         XR_SCENE_OBJECT_TYPE_UNCATEGORIZED_MSFT = -1,
@@ -635,18 +607,16 @@ namespace fn.OpenXR.Common
         XR_SCENE_OBJECT_TYPE_PLATFORM_MSFT = 5,
         XR_SCENE_OBJECT_TYPE_INFERRED_MSFT = 6,
         XR_SCENE_OBJECT_TYPE_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrScenePlaneAlignmentTypeMSFT
     {
         XR_SCENE_PLANE_ALIGNMENT_TYPE_NON_ORTHOGONAL_MSFT = 0,
         XR_SCENE_PLANE_ALIGNMENT_TYPE_HORIZONTAL_MSFT = 1,
         XR_SCENE_PLANE_ALIGNMENT_TYPE_VERTICAL_MSFT = 2,
         XR_SCENE_PLANE_ALIGNMENT_TYPE_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSceneComputeStateMSFT
     {
         XR_SCENE_COMPUTE_STATE_NONE_MSFT = 0,
@@ -654,9 +624,8 @@ namespace fn.OpenXR.Common
         XR_SCENE_COMPUTE_STATE_COMPLETED_MSFT = 2,
         XR_SCENE_COMPUTE_STATE_COMPLETED_WITH_ERROR_MSFT = 3,
         XR_SCENE_COMPUTE_STATE_MAX_ENUM_MSFT = 0x7FFFFFFF
-        
     }
-    
+
     enum XrEyeExpressionHTC
     {
         XR_EYE_EXPRESSION_LEFT_BLINK_HTC = 0,
@@ -674,9 +643,8 @@ namespace fn.OpenXR.Common
         XR_EYE_EXPRESSION_LEFT_UP_HTC = 12,
         XR_EYE_EXPRESSION_RIGHT_UP_HTC = 13,
         XR_EYE_EXPRESSION_MAX_ENUM_HTC = 0x7FFFFFFF
-        
     }
-    
+
     enum XrLipExpressionHTC
     {
         XR_LIP_EXPRESSION_JAW_RIGHT_HTC = 0,
@@ -717,17 +685,15 @@ namespace fn.OpenXR.Common
         XR_LIP_EXPRESSION_TONGUE_DOWNRIGHT_MORPH_HTC = 35,
         XR_LIP_EXPRESSION_TONGUE_DOWNLEFT_MORPH_HTC = 36,
         XR_LIP_EXPRESSION_MAX_ENUM_HTC = 0x7FFFFFFF
-        
     }
-    
+
     enum XrFacialTrackingTypeHTC
     {
         XR_FACIAL_TRACKING_TYPE_EYE_DEFAULT_HTC = 1,
         XR_FACIAL_TRACKING_TYPE_LIP_DEFAULT_HTC = 2,
         XR_FACIAL_TRACKING_TYPE_MAX_ENUM_HTC = 0x7FFFFFFF
-        
     }
-    
+
     enum XrColorSpaceFB
     {
         XR_COLOR_SPACE_UNMANAGED_FB = 0,
@@ -739,9 +705,8 @@ namespace fn.OpenXR.Common
         XR_COLOR_SPACE_P3_FB = 6,
         XR_COLOR_SPACE_ADOBE_RGB_FB = 7,
         XR_COLOR_SPACE_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSpaceComponentTypeFB
     {
         XR_SPACE_COMPONENT_TYPE_LOCATABLE_FB = 0,
@@ -752,9 +717,8 @@ namespace fn.OpenXR.Common
         XR_SPACE_COMPONENT_TYPE_ROOM_LAYOUT_FB = 6,
         XR_SPACE_COMPONENT_TYPE_SPACE_CONTAINER_FB = 7,
         XR_SPACE_COMPONENT_TYPE_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrFoveationLevelFB
     {
         XR_FOVEATION_LEVEL_NONE_FB = 0,
@@ -762,26 +726,23 @@ namespace fn.OpenXR.Common
         XR_FOVEATION_LEVEL_MEDIUM_FB = 2,
         XR_FOVEATION_LEVEL_HIGH_FB = 3,
         XR_FOVEATION_LEVEL_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrFoveationDynamicFB
     {
         XR_FOVEATION_DYNAMIC_DISABLED_FB = 0,
         XR_FOVEATION_DYNAMIC_LEVEL_ENABLED_FB = 1,
         XR_FOVEATION_DYNAMIC_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrWindingOrderFB
     {
         XR_WINDING_ORDER_UNKNOWN_FB = 0,
         XR_WINDING_ORDER_CW_FB = 1,
         XR_WINDING_ORDER_CCW_FB = 2,
         XR_WINDING_ORDER_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrPassthroughLayerPurposeFB
     {
         XR_PASSTHROUGH_LAYER_PURPOSE_RECONSTRUCTION_FB = 0,
@@ -789,9 +750,8 @@ namespace fn.OpenXR.Common
         XR_PASSTHROUGH_LAYER_PURPOSE_TRACKED_KEYBOARD_HANDS_FB = 1000203001,
         XR_PASSTHROUGH_LAYER_PURPOSE_TRACKED_KEYBOARD_MASKED_HANDS_FB = 1000203002,
         XR_PASSTHROUGH_LAYER_PURPOSE_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrHandForearmJointULTRALEAP
     {
         XR_HAND_FOREARM_JOINT_PALM_ULTRALEAP = 0,
@@ -822,32 +782,28 @@ namespace fn.OpenXR.Common
         XR_HAND_FOREARM_JOINT_LITTLE_TIP_ULTRALEAP = 25,
         XR_HAND_FOREARM_JOINT_ELBOW_ULTRALEAP = 26,
         XR_HAND_FOREARM_JOINT_MAX_ENUM_ULTRALEAP = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSpaceQueryActionFB
     {
         XR_SPACE_QUERY_ACTION_LOAD_FB = 0,
         XR_SPACE_QUERY_ACTION_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSpaceStorageLocationFB
     {
         XR_SPACE_STORAGE_LOCATION_INVALID_FB = 0,
         XR_SPACE_STORAGE_LOCATION_LOCAL_FB = 1,
         XR_SPACE_STORAGE_LOCATION_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrSpacePersistenceModeFB
     {
         XR_SPACE_PERSISTENCE_MODE_INVALID_FB = 0,
         XR_SPACE_PERSISTENCE_MODE_INDEFINITE_FB = 1,
         XR_SPACE_PERSISTENCE_MODE_MAX_ENUM_FB = 0x7FFFFFFF
-        
     }
-    
+
     enum XrPerformanceMetricsCounterUnitMETA
     {
         XR_PERFORMANCE_METRICS_COUNTER_UNIT_GENERIC_META = 0,
@@ -856,17 +812,15 @@ namespace fn.OpenXR.Common
         XR_PERFORMANCE_METRICS_COUNTER_UNIT_BYTES_META = 3,
         XR_PERFORMANCE_METRICS_COUNTER_UNIT_HERTZ_META = 4,
         XR_PERFORMANCE_METRICS_COUNTER_UNIT_MAX_ENUM_META = 0x7FFFFFFF
-        
     }
-    
+
     enum XrPassthroughFormHTC
     {
         XR_PASSTHROUGH_FORM_PLANAR_HTC = 0,
         XR_PASSTHROUGH_FORM_PROJECTED_HTC = 1,
         XR_PASSTHROUGH_FORM_MAX_ENUM_HTC = 0x7FFFFFFF
-        
     }
-    
+
     enum XrFoveationModeHTC
     {
         XR_FOVEATION_MODE_DISABLE_HTC = 0,
@@ -874,9 +828,8 @@ namespace fn.OpenXR.Common
         XR_FOVEATION_MODE_DYNAMIC_HTC = 2,
         XR_FOVEATION_MODE_CUSTOM_HTC = 3,
         XR_FOVEATION_MODE_MAX_ENUM_HTC = 0x7FFFFFFF
-        
     }
-    
+
     enum XrFoveationLevelHTC
     {
         XR_FOVEATION_LEVEL_NONE_HTC = 0,
@@ -884,7 +837,5 @@ namespace fn.OpenXR.Common
         XR_FOVEATION_LEVEL_MEDIUM_HTC = 2,
         XR_FOVEATION_LEVEL_HIGH_HTC = 3,
         XR_FOVEATION_LEVEL_MAX_ENUM_HTC = 0x7FFFFFFF
-        
     }
-    
 }
