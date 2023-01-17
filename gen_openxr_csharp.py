@@ -5,6 +5,7 @@ import re
 
 from gen_const import gen_const
 from gen_enum import gen_enum
+from gen_function import gen_function
 from gen_macro import gen_macro
 from gen_structure import gen_structure
 
@@ -45,3 +46,5 @@ if __name__ == '__main__':
         gen_macro(find_macro(lines))
 
         gen_const(find_const_values(lines))
+
+        gen_function(find_function(lines))
