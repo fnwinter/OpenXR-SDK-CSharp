@@ -23,8 +23,8 @@ def is_string(value):
     return False
 
 def gen_macro(macros):
-    with XrTemplate("macro_template.txt") as xr_enum:
-        enum_file_path = os.path.join(SCRIPT_PATH, "csharp", "openxr_macro.cs")
+    with XrTemplate("macro_template.txt") as xr_macro:
+        macro_file_path = os.path.join(SCRIPT_PATH, "csharp", "openxr_macro.cs")
 
         render_data = []
         for m in macros:
@@ -42,7 +42,7 @@ def gen_macro(macros):
                 macro_string = f"const static int {key} = {value};"
                 render_data.append(macro_string)
         
-        macro_text = xr_enum.render(render_data = render_data)
+        macro_text = xr_macro.render(render_data = render_data)
 
-        with open(enum_file_path, "w+") as f:
+        with open(macro_file_path, "w+") as f:
             f.write(macro_text)
