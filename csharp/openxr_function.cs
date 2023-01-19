@@ -41,15 +41,15 @@ namespace fn.OpenXR.Common
             out XrHandTrackerEXT handTracker);
         xrCreateHandTrackerEXTDelegate xrCreateHandTrackerEXT;
 
-        public void GetOpenXRMethod()
+        public void HookGetOpenXRFunc(XrGetInstanceProcAddrDelegate xrGetInstanceProcAddr)
         {
             /// xrCreateHandTrackerEXT
-            if (XrGetInstanceProcAddr(xrInstance, "xrCreateHandTrackerEXT", out funcPtr) == XrResult.XR_SUCCESS)
+            if (xrGetInstanceProcAddr(xrInstance, "xrCreateHandTrackerEXT", out funcPtr) == XrResult.XR_SUCCESS)
             {
                 if (funcPtr != IntPtr.Zero)
                 {
-                    xrCreateHandTrackerEXT = Marshal.GetDelegateForFunctionPointer(
-                        funcPtr, typeof(xrCreateHandTrackerEXTDelegate)) as xrCreateHandTrackerEXTDelegate;
+                    xrCreateHandTrackerEXT = Marshal.GetDelegateForFunctionPointer(funcPtr, typeof(xrCreateHandTrackerEXTDelegate))
+                        as xrCreateHandTrackerEXTDelegate;
                 }
             }
         }
