@@ -1,4 +1,5 @@
 // This file is auto-generated
+using fn.OpenXR.Common
 
 namespace fn.OpenXR.Common
 {
@@ -7,7 +8,7 @@ namespace fn.OpenXR.Common
     struct {{ item[0] }}
     {
     {% for value in item[1] %}
-        {{ value[0] }} {{ value[1] }}{{ "," if not loop.last }}
+        {{ value[0] }} {{ value[1] }};
     {% endfor %}
     }
     {% endfor %}
