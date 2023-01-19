@@ -1,4 +1,6 @@
 // This file is auto-generated
+using System.Runtime.InteropServices;
+using System;
 
 namespace fn.OpenXR.Common
 {
@@ -6,16 +8,23 @@ namespace fn.OpenXR.Common
     {
         private static readonly OpenXRAPI instance = new OpenXRAPI();
 
-        private XrInstance xrInstance = null;
-        private XrSession xrSession = null;
-
-        static OpenXRAPI()
+        private ulong xrInstance = null;
+        public ulong XrInstance
         {
+            get { return xrInstance; }
+            set { xrInstance = value; }
         }
 
-        private OpenXRAPI()
+        private ulong xrSession = null;
+        public ulong XrSession
         {
+            get { return xrSession; }
+            set { xrInstance = value; }
         }
+
+        static OpenXRAPI() { }
+
+        private OpenXRAPI() { }
 
         public static OpenXRAPI call
         {
@@ -25,8 +34,24 @@ namespace fn.OpenXR.Common
             }
         }
 
-        ///
-        // Methods
-        ///
+        // OpenXR Methods
+        public delegate XrResult xrCreateHandTrackerEXTDelegate(
+            XrSession session,
+            ref XrHandTrackerCreateInfoEXT createInfo,
+            out XrHandTrackerEXT handTracker);
+        xrCreateHandTrackerEXTDelegate xrCreateHandTrackerEXT;
+
+        public void GetOpenXRMethod()
+        {
+            /// xrCreateHandTrackerEXT
+            if (XrGetInstanceProcAddr(xrInstance, "xrCreateHandTrackerEXT", out funcPtr) == XrResult.XR_SUCCESS)
+            {
+                if (funcPtr != IntPtr.Zero)
+                {
+                    xrCreateHandTrackerEXT = Marshal.GetDelegateForFunctionPointer(
+                        funcPtr, typeof(xrCreateHandTrackerEXTDelegate)) as xrCreateHandTrackerEXTDelegate;
+                }
+            }
+        }
     }
 }

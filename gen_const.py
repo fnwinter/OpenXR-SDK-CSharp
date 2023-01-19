@@ -8,7 +8,7 @@ SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
 def get_const_string(c):
     _r = re.compile("static const (.+) (.+) = (.+)", re.MULTILINE)
     result = _r.findall(c)[0]
-    ret_string = f"const static ulong {result[1]} = {result[2]}"
+    ret_string = f"static const ulong {result[1]} = {result[2]}"
     return ret_string
 
 def gen_const(const_list):

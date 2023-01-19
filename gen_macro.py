@@ -34,11 +34,11 @@ def gen_macro(macros):
 
             macro_string = ""
             if is_string(value):
-                macro_string = f"const static string {key} = {value};"
+                macro_string = f"static const string {key} = {value};"
                 render_data.append(macro_string)
 
             if is_number(value):
-                macro_string = f"const static int {key} = {value};"
+                macro_string = f"static const int {key} = {value};"
                 render_data.append(macro_string)
         
         macro_text = xr_macro.render(render_data = render_data)
