@@ -21,7 +21,8 @@ def gen_function(functions):
         render_data = []
 
         for f in functions:
-            print(f)
+            #print(f)
+            pass
        
         function_text = xr_function.render(render_data = render_data)
 

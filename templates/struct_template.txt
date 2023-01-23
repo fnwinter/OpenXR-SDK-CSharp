@@ -1,6 +1,4 @@
 // This file is auto-generated
-using fn.OpenXR.Common
-
 namespace fn.OpenXR.Common
 {
     {%- for item in render_data %}

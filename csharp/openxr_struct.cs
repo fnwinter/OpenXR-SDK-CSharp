@@ -1,6 +1,4 @@
 // This file is auto-generated
-using fn.OpenXR.Common
-
 namespace fn.OpenXR.Common
 {
     [StructLayout(LayoutKind.Sequential)]
@@ -9,15 +7,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        char layerName[XR_MAX_API_LAYER_NAME_SIZE];
+        char[] layerName = new char[XR_MAX_API_LAYER_NAME_SIZ];
     
         XrVersion specVersion;
     
-        uint32_t layerVersion;
+        uint layerVersion;
     
-        char description[XR_MAX_API_LAYER_DESCRIPTION_SIZE];
+        char[] description = new char[XR_MAX_API_LAYER_DESCRIPTION_SIZ];
     
     }
     
@@ -27,11 +25,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        char extensionName[XR_MAX_EXTENSION_NAME_SIZE];
+        char[] extensionName = new char[XR_MAX_EXTENSION_NAME_SIZ];
     
-        uint32_t extensionVersion;
+        uint extensionVersion;
     
     }
     
@@ -39,13 +37,13 @@ namespace fn.OpenXR.Common
     struct XrApplicationInfo
     {
     
-        char applicationName[XR_MAX_APPLICATION_NAME_SIZE];
+        char[] applicationName = new char[XR_MAX_APPLICATION_NAME_SIZ];
     
-        uint32_t applicationVersion;
+        uint applicationVersion;
     
-        char engineName[XR_MAX_ENGINE_NAME_SIZE];
+        char[] engineName = new char[XR_MAX_ENGINE_NAME_SIZ];
     
-        uint32_t engineVersion;
+        uint engineVersion;
     
         XrVersion apiVersion;
     
@@ -57,19 +55,19 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrInstanceCreateFlags createFlags;
     
         XrApplicationInfo applicationInfo;
     
-        uint32_t enabledApiLayerCount;
+        uint enabledApiLayerCount;
     
-        const char* const* enabledApiLayerNames;
+        IntPtr enabledApiLayerNames;
     
-        uint32_t enabledExtensionCount;
+        uint enabledExtensionCount;
     
-        const char* const* enabledExtensionNames;
+        IntPtr enabledExtensionNames;
     
     }
     
@@ -79,11 +77,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrVersion runtimeVersion;
     
-        char runtimeName[XR_MAX_RUNTIME_NAME_SIZE];
+        char[] runtimeName = new char[XR_MAX_RUNTIME_NAME_SIZ];
     
     }
     
@@ -93,9 +91,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint8_t varying[4000];
+        uint8_t[] varying = new uint8_t[400];
     
     }
     
@@ -105,7 +103,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrFormFactor formFactor;
     
@@ -115,11 +113,11 @@ namespace fn.OpenXR.Common
     struct XrSystemGraphicsProperties
     {
     
-        uint32_t maxSwapchainImageHeight;
+        uint maxSwapchainImageHeight;
     
-        uint32_t maxSwapchainImageWidth;
+        uint maxSwapchainImageWidth;
     
-        uint32_t maxLayerCount;
+        uint maxLayerCount;
     
     }
     
@@ -127,9 +125,9 @@ namespace fn.OpenXR.Common
     struct XrSystemTrackingProperties
     {
     
-        XrBool32 orientationTracking;
+        uint orientationTracking;
     
-        XrBool32 positionTracking;
+        uint positionTracking;
     
     }
     
@@ -139,13 +137,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSystemId systemId;
     
-        uint32_t vendorId;
+        uint vendorId;
     
-        char systemName[XR_MAX_SYSTEM_NAME_SIZE];
+        char[] systemName = new char[XR_MAX_SYSTEM_NAME_SIZ];
     
         XrSystemGraphicsProperties graphicsProperties;
     
@@ -159,7 +157,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSessionCreateFlags createFlags;
     
@@ -185,7 +183,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpaceVelocityFlags velocityFlags;
     
@@ -225,7 +223,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrReferenceSpaceType referenceSpaceType;
     
@@ -249,7 +247,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAction action;
     
@@ -265,7 +263,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpaceLocationFlags locationFlags;
     
@@ -279,11 +277,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrViewConfigurationType viewConfigurationType;
     
-        XrBool32 fovMutable;
+        uint fovMutable;
     
     }
     
@@ -293,19 +291,19 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t recommendedImageRectWidth;
+        uint recommendedImageRectWidth;
     
-        uint32_t maxImageRectWidth;
+        uint maxImageRectWidth;
     
-        uint32_t recommendedImageRectHeight;
+        uint recommendedImageRectHeight;
     
-        uint32_t maxImageRectHeight;
+        uint maxImageRectHeight;
     
-        uint32_t recommendedSwapchainSampleCount;
+        uint recommendedSwapchainSampleCount;
     
-        uint32_t maxSwapchainSampleCount;
+        uint maxSwapchainSampleCount;
     
     }
     
@@ -315,7 +313,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSwapchainCreateFlags createFlags;
     
@@ -323,17 +321,17 @@ namespace fn.OpenXR.Common
     
         int64_t format;
     
-        uint32_t sampleCount;
+        uint sampleCount;
     
-        uint32_t width;
+        uint width;
     
-        uint32_t height;
+        uint height;
     
-        uint32_t faceCount;
+        uint faceCount;
     
-        uint32_t arraySize;
+        uint arraySize;
     
-        uint32_t mipCount;
+        uint mipCount;
     
     }
     
@@ -343,7 +341,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -353,7 +351,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -363,7 +361,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrDuration timeout;
     
@@ -375,7 +373,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -385,7 +383,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrViewConfigurationType primaryViewConfigurationType;
     
@@ -397,7 +395,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -407,13 +405,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrTime predictedDisplayTime;
     
         XrDuration predictedDisplayPeriod;
     
-        XrBool32 shouldRender;
+        uint shouldRender;
     
     }
     
@@ -423,7 +421,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -433,7 +431,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerFlags layerFlags;
     
@@ -447,15 +445,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrTime displayTime;
     
         XrEnvironmentBlendMode environmentBlendMode;
     
-        uint32_t layerCount;
+        uint layerCount;
     
-        const XrCompositionLayerBaseHeader* const* layers;
+        IntPtr layers;
     
     }
     
@@ -465,7 +463,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrViewConfigurationType viewConfigurationType;
     
@@ -481,7 +479,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrViewStateFlags viewStateFlags;
     
@@ -507,7 +505,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPosef pose;
     
@@ -521,13 +519,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        char actionSetName[XR_MAX_ACTION_SET_NAME_SIZE];
+        char[] actionSetName = new char[XR_MAX_ACTION_SET_NAME_SIZ];
     
-        char localizedActionSetName[XR_MAX_LOCALIZED_ACTION_SET_NAME_SIZE];
+        char[] localizedActionSetName = new char[XR_MAX_LOCALIZED_ACTION_SET_NAME_SIZ];
     
-        uint32_t priority;
+        uint priority;
     
     }
     
@@ -537,17 +535,17 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        char actionName[XR_MAX_ACTION_NAME_SIZE];
+        char[] actionName = new char[XR_MAX_ACTION_NAME_SIZ];
     
         XrActionType actionType;
     
-        uint32_t countSubactionPaths;
+        uint countSubactionPaths;
     
-        const XrPath* subactionPaths;
+        IntPtr subactionPaths;
     
-        char localizedActionName[XR_MAX_LOCALIZED_ACTION_NAME_SIZE];
+        char[] localizedActionName = new char[XR_MAX_LOCALIZED_ACTION_NAME_SIZ];
     
     }
     
@@ -567,13 +565,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPath interactionProfile;
     
-        uint32_t countSuggestedBindings;
+        uint countSuggestedBindings;
     
-        const XrActionSuggestedBinding* suggestedBindings;
+        IntPtr suggestedBindings;
     
     }
     
@@ -583,11 +581,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t countActionSets;
+        uint countActionSets;
     
-        const XrActionSet* actionSets;
+        IntPtr actionSets;
     
     }
     
@@ -597,7 +595,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPath interactionProfile;
     
@@ -609,7 +607,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAction action;
     
@@ -623,15 +621,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 currentState;
+        uint currentState;
     
-        XrBool32 changedSinceLastSync;
+        uint changedSinceLastSync;
     
         XrTime lastChangeTime;
     
-        XrBool32 isActive;
+        uint isActive;
     
     }
     
@@ -641,15 +639,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         float currentState;
     
-        XrBool32 changedSinceLastSync;
+        uint changedSinceLastSync;
     
         XrTime lastChangeTime;
     
-        XrBool32 isActive;
+        uint isActive;
     
     }
     
@@ -669,15 +667,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrVector2f currentState;
     
-        XrBool32 changedSinceLastSync;
+        uint changedSinceLastSync;
     
         XrTime lastChangeTime;
     
-        XrBool32 isActive;
+        uint isActive;
     
     }
     
@@ -687,9 +685,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 isActive;
+        uint isActive;
     
     }
     
@@ -709,11 +707,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t countActiveActionSets;
+        uint countActiveActionSets;
     
-        const XrActiveActionSet* activeActionSets;
+        IntPtr activeActionSets;
     
     }
     
@@ -723,7 +721,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAction action;
     
@@ -735,7 +733,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPath sourcePath;
     
@@ -749,7 +747,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAction action;
     
@@ -763,7 +761,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -773,7 +771,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const struct XrBaseInStructure* next;
+        IntPtr next;
     
     }
     
@@ -783,7 +781,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        struct XrBaseOutStructure* next;
+        IntPtr next;
     
     }
     
@@ -825,7 +823,7 @@ namespace fn.OpenXR.Common
     
         XrRect2Di imageRect;
     
-        uint32_t imageArrayIndex;
+        uint imageArrayIndex;
     
     }
     
@@ -835,7 +833,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPosef pose;
     
@@ -851,15 +849,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerFlags layerFlags;
     
         XrSpace space;
     
-        uint32_t viewCount;
+        uint viewCount;
     
-        const XrCompositionLayerProjectionView* views;
+        IntPtr views;
     
     }
     
@@ -869,7 +867,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerFlags layerFlags;
     
@@ -891,7 +889,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -901,9 +899,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t lostEventCount;
+        uint lostEventCount;
     
     }
     
@@ -913,7 +911,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrTime lossTime;
     
@@ -925,7 +923,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSession session;
     
@@ -941,7 +939,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSession session;
     
@@ -949,7 +947,7 @@ namespace fn.OpenXR.Common
     
         XrTime changeTime;
     
-        XrBool32 poseValid;
+        uint poseValid;
     
         XrPosef poseInPreviousSpace;
     
@@ -961,7 +959,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSession session;
     
@@ -973,7 +971,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrDuration duration;
     
@@ -1037,7 +1035,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerFlags layerFlags;
     
@@ -1047,7 +1045,7 @@ namespace fn.OpenXR.Common
     
         XrSwapchain swapchain;
     
-        uint32_t imageArrayIndex;
+        uint imageArrayIndex;
     
         XrQuaternionf orientation;
     
@@ -1059,7 +1057,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSwapchainSubImage subImage;
     
@@ -1079,7 +1077,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerFlags layerFlags;
     
@@ -1105,7 +1103,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerFlags layerFlags;
     
@@ -1131,19 +1129,19 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t vertexCapacityInput;
+        uint vertexCapacityInput;
     
-        uint32_t vertexCountOutput;
+        uint vertexCountOutput;
     
-        XrVector2f* vertices;
+        IntPtr vertices;
     
-        uint32_t indexCapacityInput;
+        uint indexCapacityInput;
     
-        uint32_t indexCountOutput;
+        uint indexCountOutput;
     
-        uint32_t* indices;
+        IntPtr indices;
     
     }
     
@@ -1153,13 +1151,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSession session;
     
         XrViewConfigurationType viewConfigurationType;
     
-        uint32_t viewIndex;
+        uint viewIndex;
     
     }
     
@@ -1169,7 +1167,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrColor4f colorScale;
     
@@ -1183,7 +1181,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -1193,7 +1191,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerFlags layerFlags;
     
@@ -1221,7 +1219,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -1231,11 +1229,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t bindingModificationCount;
+        uint bindingModificationCount;
     
-        const XrBindingModificationBaseHeaderKHR* const* bindingModifications;
+        IntPtr bindingModifications;
     
     }
     
@@ -1245,7 +1243,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPerfSettingsDomainEXT domain;
     
@@ -1263,13 +1261,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrObjectType objectType;
     
-        uint64_t objectHandle;
+        ulong objectHandle;
     
-        const char* objectName;
+        IntPtr objectName;
     
     }
     
@@ -1279,9 +1277,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        const char* labelName;
+        IntPtr labelName;
     
     }
     
@@ -1291,21 +1289,21 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        const char* messageId;
+        IntPtr messageId;
     
-        const char* functionName;
+        IntPtr functionName;
     
-        const char* message;
+        IntPtr message;
     
-        uint32_t objectCount;
+        uint objectCount;
     
-        XrDebugUtilsObjectNameInfoEXT* objects;
+        IntPtr objects;
     
-        uint32_t sessionLabelCount;
+        uint sessionLabelCount;
     
-        XrDebugUtilsLabelEXT* sessionLabels;
+        IntPtr sessionLabels;
     
     }
     
@@ -1315,7 +1313,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrDebugUtilsMessageSeverityFlagsEXT messageSeverities;
     
@@ -1323,7 +1321,7 @@ namespace fn.OpenXR.Common
     
         PFN_xrDebugUtilsMessengerCallbackEXT userCallback;
     
-        void* XR_MAY_ALIAS userData;
+        IntPtr userData;
     
     }
     
@@ -1333,9 +1331,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportsEyeGazeInteraction;
+        uint supportsEyeGazeInteraction;
     
     }
     
@@ -1345,7 +1343,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrTime time;
     
@@ -1357,11 +1355,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrOverlaySessionCreateFlagsEXTX createFlags;
     
-        uint32_t sessionLayersPlacement;
+        uint sessionLayersPlacement;
     
     }
     
@@ -1371,9 +1369,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 visible;
+        uint visible;
     
         XrOverlayMainSessionFlagsEXTX flags;
     
@@ -1385,7 +1383,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpace space;
     
@@ -1401,7 +1399,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpatialAnchorMSFT anchor;
     
@@ -1415,7 +1413,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerImageLayoutFlagsFB flags;
     
@@ -1427,7 +1425,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrBlendFactorFB srcFactorColor;
     
@@ -1445,7 +1443,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         float recommendedNearZ;
     
@@ -1463,11 +1461,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpatialGraphNodeTypeMSFT nodeType;
     
-        uint8_t nodeId[XR_GUID_SIZE_MSFT];
+        uint8_t[] nodeId = new uint8_t[XR_GUID_SIZE_MSF];
     
         XrPosef pose;
     
@@ -1479,7 +1477,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpace space;
     
@@ -1495,7 +1493,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -1505,9 +1503,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint8_t nodeId[XR_GUID_SIZE_MSFT];
+        uint8_t[] nodeId = new uint8_t[XR_GUID_SIZE_MSF];
     
         XrPosef poseInNodeSpace;
     
@@ -1519,9 +1517,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportsHandTracking;
+        uint supportsHandTracking;
     
     }
     
@@ -1531,7 +1529,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrHandEXT hand;
     
@@ -1545,7 +1543,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpace baseSpace;
     
@@ -1583,13 +1581,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 isActive;
+        uint isActive;
     
-        uint32_t jointCount;
+        uint jointCount;
     
-        XrHandJointLocationEXT* jointLocations;
+        IntPtr jointLocations;
     
     }
     
@@ -1599,11 +1597,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t jointCount;
+        uint jointCount;
     
-        XrHandJointVelocityEXT* jointVelocities;
+        IntPtr jointVelocities;
     
     }
     
@@ -1613,13 +1611,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportsHandTrackingMesh;
+        uint supportsHandTrackingMesh;
     
-        uint32_t maxHandMeshIndexCount;
+        uint maxHandMeshIndexCount;
     
-        uint32_t maxHandMeshVertexCount;
+        uint maxHandMeshVertexCount;
     
     }
     
@@ -1629,7 +1627,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrHandPoseTypeMSFT handPoseType;
     
@@ -1643,7 +1641,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrTime time;
     
@@ -1655,13 +1653,13 @@ namespace fn.OpenXR.Common
     struct XrHandMeshIndexBufferMSFT
     {
     
-        uint32_t indexBufferKey;
+        uint indexBufferKey;
     
-        uint32_t indexCapacityInput;
+        uint indexCapacityInput;
     
-        uint32_t indexCountOutput;
+        uint indexCountOutput;
     
-        uint32_t* indices;
+        IntPtr indices;
     
     }
     
@@ -1681,11 +1679,11 @@ namespace fn.OpenXR.Common
     
         XrTime vertexUpdateTime;
     
-        uint32_t vertexCapacityInput;
+        uint vertexCapacityInput;
     
-        uint32_t vertexCountOutput;
+        uint vertexCountOutput;
     
-        XrHandMeshVertexMSFT* vertices;
+        IntPtr vertices;
     
     }
     
@@ -1695,13 +1693,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 isActive;
+        uint isActive;
     
-        XrBool32 indexBufferChanged;
+        uint indexBufferChanged;
     
-        XrBool32 vertexBufferChanged;
+        uint vertexBufferChanged;
     
         XrHandMeshIndexBufferMSFT indexBuffer;
     
@@ -1715,7 +1713,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrHandPoseTypeMSFT handPoseType;
     
@@ -1727,11 +1725,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t viewConfigurationCount;
+        uint viewConfigurationCount;
     
-        const XrViewConfigurationType* enabledViewConfigurationTypes;
+        IntPtr enabledViewConfigurationTypes;
     
     }
     
@@ -1741,11 +1739,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrViewConfigurationType viewConfigurationType;
     
-        XrBool32 active;
+        uint active;
     
     }
     
@@ -1755,11 +1753,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t viewConfigurationCount;
+        uint viewConfigurationCount;
     
-        XrSecondaryViewConfigurationStateMSFT* viewConfigurationStates;
+        IntPtr viewConfigurationStates;
     
     }
     
@@ -1769,15 +1767,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrViewConfigurationType viewConfigurationType;
     
         XrEnvironmentBlendMode environmentBlendMode;
     
-        uint32_t layerCount;
+        uint layerCount;
     
-        const XrCompositionLayerBaseHeader* const* layers;
+        IntPtr layers;
     
     }
     
@@ -1787,11 +1785,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t viewConfigurationCount;
+        uint viewConfigurationCount;
     
-        const XrSecondaryViewConfigurationLayerInfoMSFT* viewConfigurationLayersInfo;
+        IntPtr viewConfigurationLayersInfo;
     
     }
     
@@ -1801,7 +1799,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrViewConfigurationType viewConfigurationType;
     
@@ -1813,7 +1811,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrControllerModelKeyMSFT modelKey;
     
@@ -1825,11 +1823,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        char parentNodeName[XR_MAX_CONTROLLER_MODEL_NODE_NAME_SIZE_MSFT];
+        char[] parentNodeName = new char[XR_MAX_CONTROLLER_MODEL_NODE_NAME_SIZE_MSF];
     
-        char nodeName[XR_MAX_CONTROLLER_MODEL_NODE_NAME_SIZE_MSFT];
+        char[] nodeName = new char[XR_MAX_CONTROLLER_MODEL_NODE_NAME_SIZE_MSF];
     
     }
     
@@ -1839,13 +1837,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t nodeCapacityInput;
+        uint nodeCapacityInput;
     
-        uint32_t nodeCountOutput;
+        uint nodeCountOutput;
     
-        XrControllerModelNodePropertiesMSFT* nodeProperties;
+        IntPtr nodeProperties;
     
     }
     
@@ -1855,7 +1853,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPosef nodePose;
     
@@ -1867,13 +1865,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t nodeCapacityInput;
+        uint nodeCapacityInput;
     
-        uint32_t nodeCountOutput;
+        uint nodeCountOutput;
     
-        XrControllerModelNodeStateMSFT* nodeStates;
+        IntPtr nodeStates;
     
     }
     
@@ -1883,7 +1881,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrFovf recommendedFov;
     
@@ -1897,7 +1895,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrReprojectionModeMSFT reprojectionMode;
     
@@ -1909,7 +1907,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrVector3f position;
     
@@ -1925,7 +1923,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -1935,7 +1933,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerSecureContentFlagsFB flags;
     
@@ -1947,7 +1945,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPath binding;
     
@@ -1961,11 +1959,11 @@ namespace fn.OpenXR.Common
     
         float wedgeAngle;
     
-        XrBool32 isSticky;
+        uint isSticky;
     
-        const XrHapticBaseHeader* onHaptic;
+        IntPtr onHaptic;
     
-        const XrHapticBaseHeader* offHaptic;
+        IntPtr offHaptic;
     
     }
     
@@ -1975,7 +1973,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAction action;
     
@@ -1985,9 +1983,9 @@ namespace fn.OpenXR.Common
     
         float offThreshold;
     
-        const XrHapticBaseHeader* onHaptic;
+        IntPtr onHaptic;
     
-        const XrHapticBaseHeader* offHaptic;
+        IntPtr offHaptic;
     
     }
     
@@ -1997,7 +1995,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrHandJointsMotionRangeEXT handJointsMotionRange;
     
@@ -2007,7 +2005,7 @@ namespace fn.OpenXR.Common
     struct XrUuidMSFT
     {
     
-        uint8_t bytes[16];
+        uint8_t[] bytes = new uint8_t[1];
     
     }
     
@@ -2017,7 +2015,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -2027,7 +2025,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -2071,17 +2069,17 @@ namespace fn.OpenXR.Common
     
         XrTime time;
     
-        uint32_t sphereCount;
+        uint sphereCount;
     
-        const XrSceneSphereBoundMSFT* spheres;
+        IntPtr spheres;
     
-        uint32_t boxCount;
+        uint boxCount;
     
-        const XrSceneOrientedBoxBoundMSFT* boxes;
+        IntPtr boxes;
     
-        uint32_t frustumCount;
+        uint frustumCount;
     
-        const XrSceneFrustumBoundMSFT* frustums;
+        IntPtr frustums;
     
     }
     
@@ -2091,11 +2089,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t requestedFeatureCount;
+        uint requestedFeatureCount;
     
-        const XrSceneComputeFeatureMSFT* requestedFeatures;
+        IntPtr requestedFeatures;
     
         XrSceneComputeConsistencyMSFT consistency;
     
@@ -2109,7 +2107,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrMeshComputeLodMSFT lod;
     
@@ -2135,13 +2133,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t componentCapacityInput;
+        uint componentCapacityInput;
     
-        uint32_t componentCountOutput;
+        uint componentCountOutput;
     
-        XrSceneComponentMSFT* components;
+        IntPtr components;
     
     }
     
@@ -2151,7 +2149,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSceneComponentTypeMSFT componentType;
     
@@ -2173,11 +2171,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t locationCount;
+        uint locationCount;
     
-        XrSceneComponentLocationMSFT* locations;
+        IntPtr locations;
     
     }
     
@@ -2187,15 +2185,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpace baseSpace;
     
         XrTime time;
     
-        uint32_t componentIdCount;
+        uint componentIdCount;
     
-        const XrUuidMSFT* componentIds;
+        IntPtr componentIds;
     
     }
     
@@ -2213,11 +2211,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t sceneObjectCount;
+        uint sceneObjectCount;
     
-        XrSceneObjectMSFT* sceneObjects;
+        IntPtr sceneObjects;
     
     }
     
@@ -2227,7 +2225,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrUuidMSFT parentId;
     
@@ -2239,11 +2237,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t objectTypeCount;
+        uint objectTypeCount;
     
-        const XrSceneObjectTypeMSFT* objectTypes;
+        IntPtr objectTypes;
     
     }
     
@@ -2255,9 +2253,9 @@ namespace fn.OpenXR.Common
     
         XrExtent2Df size;
     
-        uint64_t meshBufferId;
+        ulong meshBufferId;
     
-        XrBool32 supportsIndicesUint16;
+        uint supportsIndicesUint16;
     
     }
     
@@ -2267,11 +2265,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t scenePlaneCount;
+        uint scenePlaneCount;
     
-        XrScenePlaneMSFT* scenePlanes;
+        IntPtr scenePlanes;
     
     }
     
@@ -2281,11 +2279,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t alignmentCount;
+        uint alignmentCount;
     
-        const XrScenePlaneAlignmentTypeMSFT* alignments;
+        IntPtr alignments;
     
     }
     
@@ -2293,9 +2291,9 @@ namespace fn.OpenXR.Common
     struct XrSceneMeshMSFT
     {
     
-        uint64_t meshBufferId;
+        ulong meshBufferId;
     
-        XrBool32 supportsIndicesUint16;
+        uint supportsIndicesUint16;
     
     }
     
@@ -2305,11 +2303,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t sceneMeshCount;
+        uint sceneMeshCount;
     
-        XrSceneMeshMSFT* sceneMeshes;
+        IntPtr sceneMeshes;
     
     }
     
@@ -2319,9 +2317,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint64_t meshBufferId;
+        ulong meshBufferId;
     
     }
     
@@ -2331,7 +2329,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -2341,13 +2339,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t vertexCapacityInput;
+        uint vertexCapacityInput;
     
-        uint32_t vertexCountOutput;
+        uint vertexCountOutput;
     
-        XrVector3f* vertices;
+        IntPtr vertices;
     
     }
     
@@ -2357,13 +2355,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t indexCapacityInput;
+        uint indexCapacityInput;
     
-        uint32_t indexCountOutput;
+        uint indexCountOutput;
     
-        uint32_t* indices;
+        IntPtr indices;
     
     }
     
@@ -2373,13 +2371,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t indexCapacityInput;
+        uint indexCapacityInput;
     
-        uint32_t indexCountOutput;
+        uint indexCountOutput;
     
-        uint16_t* indices;
+        IntPtr indices;
     
     }
     
@@ -2389,7 +2387,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrUuidMSFT sceneFragmentId;
     
@@ -2399,9 +2397,9 @@ namespace fn.OpenXR.Common
     struct XrDeserializeSceneFragmentMSFT
     {
     
-        uint32_t bufferSize;
+        uint bufferSize;
     
-        const uint8_t* buffer;
+        IntPtr buffer;
     
     }
     
@@ -2411,11 +2409,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t fragmentCount;
+        uint fragmentCount;
     
-        const XrDeserializeSceneFragmentMSFT* fragments;
+        IntPtr fragments;
     
     }
     
@@ -2425,7 +2423,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         float fromDisplayRefreshRate;
     
@@ -2439,7 +2437,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPath persistentPath;
     
@@ -2453,9 +2451,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrViveTrackerPathsHTCX* paths;
+        IntPtr paths;
     
     }
     
@@ -2465,11 +2463,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportEyeFacialTracking;
+        uint supportEyeFacialTracking;
     
-        XrBool32 supportLipFacialTracking;
+        uint supportLipFacialTracking;
     
     }
     
@@ -2479,15 +2477,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 isActive;
+        uint isActive;
     
         XrTime sampleTime;
     
-        uint32_t expressionCount;
+        uint expressionCount;
     
-        float* expressionWeightings;
+        IntPtr expressionWeightings;
     
     }
     
@@ -2497,7 +2495,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrFacialTrackingTypeHTC facialTrackingType;
     
@@ -2509,7 +2507,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrColorSpaceFB colorSpace;
     
@@ -2535,37 +2533,37 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t jointCapacityInput;
+        uint jointCapacityInput;
     
-        uint32_t jointCountOutput;
+        uint jointCountOutput;
     
-        XrPosef* jointBindPoses;
+        IntPtr jointBindPoses;
     
-        float* jointRadii;
+        IntPtr jointRadii;
     
-        XrHandJointEXT* jointParents;
+        IntPtr jointParents;
     
-        uint32_t vertexCapacityInput;
+        uint vertexCapacityInput;
     
-        uint32_t vertexCountOutput;
+        uint vertexCountOutput;
     
-        XrVector3f* vertexPositions;
+        IntPtr vertexPositions;
     
-        XrVector3f* vertexNormals;
+        IntPtr vertexNormals;
     
-        XrVector2f* vertexUVs;
+        IntPtr vertexUVs;
     
-        XrVector4sFB* vertexBlendIndices;
+        IntPtr vertexBlendIndices;
     
-        XrVector4f* vertexBlendWeights;
+        IntPtr vertexBlendWeights;
     
-        uint32_t indexCapacityInput;
+        uint indexCapacityInput;
     
-        uint32_t indexCountOutput;
+        uint indexCountOutput;
     
-        int16_t* indices;
+        IntPtr indices;
     
     }
     
@@ -2575,13 +2573,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         float sensorOutput;
     
         float currentOutput;
     
-        XrBool32 overrideHandScale;
+        uint overrideHandScale;
     
         float overrideValueInput;
     
@@ -2593,7 +2591,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrHandTrackingAimFlagsFB status;
     
@@ -2613,7 +2611,7 @@ namespace fn.OpenXR.Common
     struct XrHandCapsuleFB
     {
     
-        XrVector3f points[XR_HAND_TRACKING_CAPSULE_POINT_COUNT_FB];
+        XrVector3f[] points = new XrVector3f[XR_HAND_TRACKING_CAPSULE_POINT_COUNT_F];
     
         float radius;
     
@@ -2627,9 +2625,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrHandCapsuleFB capsules[XR_HAND_TRACKING_CAPSULE_COUNT_FB];
+        XrHandCapsuleFB[] capsules = new XrHandCapsuleFB[XR_HAND_TRACKING_CAPSULE_COUNT_F];
     
     }
     
@@ -2639,9 +2637,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportsSpatialEntity;
+        uint supportsSpatialEntity;
     
     }
     
@@ -2651,7 +2649,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpace space;
     
@@ -2667,11 +2665,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpaceComponentTypeFB componentType;
     
-        XrBool32 enabled;
+        uint enabled;
     
         XrDuration timeout;
     
@@ -2683,11 +2681,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 enabled;
+        uint enabled;
     
-        XrBool32 changePending;
+        uint changePending;
     
     }
     
@@ -2695,7 +2693,7 @@ namespace fn.OpenXR.Common
     struct XrUuidEXT
     {
     
-        uint8_t data[XR_UUID_SIZE_EXT];
+        uint8_t[] data = new uint8_t[XR_UUID_SIZE_EX];
     
     }
     
@@ -2705,7 +2703,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAsyncRequestIdFB requestId;
     
@@ -2723,7 +2721,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAsyncRequestIdFB requestId;
     
@@ -2735,7 +2733,7 @@ namespace fn.OpenXR.Common
     
         XrSpaceComponentTypeFB componentType;
     
-        XrBool32 enabled;
+        uint enabled;
     
     }
     
@@ -2745,7 +2743,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -2755,7 +2753,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSwapchainCreateFoveationFlagsFB flags;
     
@@ -2767,7 +2765,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSwapchainStateFoveationFlagsFB flags;
     
@@ -2781,7 +2779,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrFoveationLevelFB level;
     
@@ -2797,9 +2795,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportsKeyboardTracking;
+        uint supportsKeyboardTracking;
     
     }
     
@@ -2807,13 +2805,13 @@ namespace fn.OpenXR.Common
     struct XrKeyboardTrackingDescriptionFB
     {
     
-        uint64_t trackedKeyboardId;
+        ulong trackedKeyboardId;
     
         XrVector3f size;
     
         XrKeyboardTrackingFlagsFB flags;
     
-        char name[XR_MAX_KEYBOARD_TRACKING_NAME_SIZE_FB];
+        char[] name = new char[XR_MAX_KEYBOARD_TRACKING_NAME_SIZE_F];
     
     }
     
@@ -2823,9 +2821,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint64_t trackedKeyboardId;
+        ulong trackedKeyboardId;
     
     }
     
@@ -2835,7 +2833,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrKeyboardTrackingQueryFlagsFB flags;
     
@@ -2847,19 +2845,19 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrTriangleMeshFlagsFB flags;
     
         XrWindingOrderFB windingOrder;
     
-        uint32_t vertexCount;
+        uint vertexCount;
     
-        const XrVector3f* vertexBuffer;
+        IntPtr vertexBuffer;
     
-        uint32_t triangleCount;
+        uint triangleCount;
     
-        const uint32_t* indexBuffer;
+        IntPtr indexBuffer;
     
     }
     
@@ -2869,9 +2867,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportsPassthrough;
+        uint supportsPassthrough;
     
     }
     
@@ -2881,7 +2879,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPassthroughCapabilityFlagsFB capabilities;
     
@@ -2893,7 +2891,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPassthroughFlagsFB flags;
     
@@ -2905,7 +2903,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPassthroughFB passthrough;
     
@@ -2921,7 +2919,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerFlags flags;
     
@@ -2937,7 +2935,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPassthroughLayerFB layer;
     
@@ -2957,7 +2955,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpace baseSpace;
     
@@ -2975,7 +2973,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         float textureOpacityFactor;
     
@@ -2989,9 +2987,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrColor4f textureColorMap[XR_PASSTHROUGH_COLOR_MAP_MONO_SIZE_FB];
+        XrColor4f[] textureColorMap = new XrColor4f[XR_PASSTHROUGH_COLOR_MAP_MONO_SIZE_F];
     
     }
     
@@ -3001,9 +2999,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint8_t textureColorMap[XR_PASSTHROUGH_COLOR_MAP_MONO_SIZE_FB];
+        uint8_t[] textureColorMap = new uint8_t[XR_PASSTHROUGH_COLOR_MAP_MONO_SIZE_F];
     
     }
     
@@ -3013,7 +3011,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         float brightness;
     
@@ -3029,7 +3027,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPassthroughStateChangedFlagsFB flags;
     
@@ -3041,7 +3039,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPath path;
     
@@ -3053,15 +3051,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t vendorId;
+        uint vendorId;
     
-        char modelName[XR_MAX_RENDER_MODEL_NAME_SIZE_FB];
+        char[] modelName = new char[XR_MAX_RENDER_MODEL_NAME_SIZE_F];
     
         XrRenderModelKeyFB modelKey;
     
-        uint32_t modelVersion;
+        uint modelVersion;
     
         XrRenderModelFlagsFB flags;
     
@@ -3073,13 +3071,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t bufferCapacityInput;
+        uint bufferCapacityInput;
     
-        uint32_t bufferCountOutput;
+        uint bufferCountOutput;
     
-        uint8_t* buffer;
+        IntPtr buffer;
     
     }
     
@@ -3089,7 +3087,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrRenderModelKeyFB modelKey;
     
@@ -3101,9 +3099,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportsRenderModelLoading;
+        uint supportsRenderModelLoading;
     
     }
     
@@ -3113,7 +3111,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrRenderModelFlagsFB flags;
     
@@ -3125,9 +3123,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 foveatedRenderingActive;
+        uint foveatedRenderingActive;
     
     }
     
@@ -3137,9 +3135,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 foveatedRenderingActive;
+        uint foveatedRenderingActive;
     
     }
     
@@ -3149,9 +3147,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportsFoveatedRendering;
+        uint supportsFoveatedRendering;
     
     }
     
@@ -3161,7 +3159,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         float depthTestRangeNearZ;
     
@@ -3175,9 +3173,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 supportsMarkerTracking;
+        uint supportsMarkerTracking;
     
     }
     
@@ -3187,13 +3185,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint64_t markerId;
+        ulong markerId;
     
-        XrBool32 isActive;
+        uint isActive;
     
-        XrBool32 isPredicted;
+        uint isPredicted;
     
         XrTime time;
     
@@ -3205,9 +3203,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint64_t markerId;
+        ulong markerId;
     
         XrPosef poseInMarkerSpace;
     
@@ -3217,7 +3215,7 @@ namespace fn.OpenXR.Common
     struct XrSpatialAnchorPersistenceNameMSFT
     {
     
-        char name[XR_MAX_SPATIAL_ANCHOR_NAME_SIZE_MSFT];
+        char[] name = new char[XR_MAX_SPATIAL_ANCHOR_NAME_SIZE_MSF];
     
     }
     
@@ -3227,7 +3225,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpatialAnchorPersistenceNameMSFT spatialAnchorPersistenceName;
     
@@ -3241,7 +3239,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpatialAnchorStoreConnectionMSFT spatialAnchorStore;
     
@@ -3255,7 +3253,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -3265,7 +3263,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
     }
     
@@ -3275,17 +3273,17 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpaceQueryActionFB queryAction;
     
-        uint32_t maxResultCount;
+        uint maxResultCount;
     
         XrDuration timeout;
     
-        const XrSpaceFilterInfoBaseHeaderFB* filter;
+        IntPtr filter;
     
-        const XrSpaceFilterInfoBaseHeaderFB* excludeFilter;
+        IntPtr excludeFilter;
     
     }
     
@@ -3295,7 +3293,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpaceStorageLocationFB location;
     
@@ -3307,11 +3305,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t uuidCount;
+        uint uuidCount;
     
-        XrUuidEXT* uuids;
+        IntPtr uuids;
     
     }
     
@@ -3321,7 +3319,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpaceComponentTypeFB componentType;
     
@@ -3343,13 +3341,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t resultCapacityInput;
+        uint resultCapacityInput;
     
-        uint32_t resultCountOutput;
+        uint resultCountOutput;
     
-        XrSpaceQueryResultFB* results;
+        IntPtr results;
     
     }
     
@@ -3359,7 +3357,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAsyncRequestIdFB requestId;
     
@@ -3371,7 +3369,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAsyncRequestIdFB requestId;
     
@@ -3385,7 +3383,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpace space;
     
@@ -3401,7 +3399,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrSpace space;
     
@@ -3415,7 +3413,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAsyncRequestIdFB requestId;
     
@@ -3435,7 +3433,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrAsyncRequestIdFB requestId;
     
@@ -3455,7 +3453,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerSpaceWarpInfoFlagsFB layerFlags;
     
@@ -3481,11 +3479,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t recommendedMotionVectorImageRectWidth;
+        uint recommendedMotionVectorImageRectWidth;
     
-        uint32_t recommendedMotionVectorImageRectHeight;
+        uint recommendedMotionVectorImageRectHeight;
     
     }
     
@@ -3529,13 +3527,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t bufferCapacityInput;
+        uint bufferCapacityInput;
     
-        uint32_t bufferCountOutput;
+        uint bufferCountOutput;
     
-        char* buffer;
+        IntPtr buffer;
     
     }
     
@@ -3545,17 +3543,17 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrUuidEXT floorUuid;
     
         XrUuidEXT ceilingUuid;
     
-        uint32_t wallUuidCapacityInput;
+        uint wallUuidCapacityInput;
     
-        uint32_t wallUuidCountOutput;
+        uint wallUuidCountOutput;
     
-        XrUuidEXT* wallUuids;
+        IntPtr wallUuids;
     
     }
     
@@ -3565,13 +3563,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t vertexCapacityInput;
+        uint vertexCapacityInput;
     
-        uint32_t vertexCountOutput;
+        uint vertexCountOutput;
     
-        XrVector2f* vertices;
+        IntPtr vertices;
     
     }
     
@@ -3581,7 +3579,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrDigitalLensControlFlagsALMALENCE flags;
     
@@ -3593,13 +3591,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t uuidCapacityInput;
+        uint uuidCapacityInput;
     
-        uint32_t uuidCountOutput;
+        uint uuidCountOutput;
     
-        XrUuidEXT* uuids;
+        IntPtr uuids;
     
     }
     
@@ -3609,7 +3607,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         float leftHandIntensity;
     
@@ -3623,7 +3621,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerSettingsFlagsFB layerFlags;
     
@@ -3635,9 +3633,9 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        XrBool32 enabled;
+        uint enabled;
     
     }
     
@@ -3647,13 +3645,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPerformanceMetricsCounterFlagsMETA counterFlags;
     
         XrPerformanceMetricsCounterUnitMETA counterUnit;
     
-        uint32_t uintValue;
+        uint uintValue;
     
         float floatValue;
     
@@ -3665,7 +3663,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrUuidEXT id;
     
@@ -3677,7 +3675,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrPassthroughFormHTC form;
     
@@ -3689,7 +3687,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         float alpha;
     
@@ -3701,15 +3699,15 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t vertexCount;
+        uint vertexCount;
     
-        const XrVector3f* vertices;
+        IntPtr vertices;
     
-        uint32_t indexCount;
+        uint indexCount;
     
-        const uint32_t* indices;
+        IntPtr indices;
     
         XrSpace baseSpace;
     
@@ -3727,7 +3725,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrCompositionLayerFlags layerFlags;
     
@@ -3745,13 +3743,13 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrFoveationModeHTC mode;
     
-        uint32_t subImageCount;
+        uint subImageCount;
     
-        XrSwapchainSubImage* subImages;
+        IntPtr subImages;
     
     }
     
@@ -3773,7 +3771,7 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
         XrFoveationDynamicFlagsHTC dynamicFlags;
     
@@ -3785,11 +3783,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t configCount;
+        uint configCount;
     
-        const XrFoveationConfigurationHTC* configs;
+        IntPtr configs;
     
     }
     
@@ -3799,7 +3797,7 @@ namespace fn.OpenXR.Common
     
         XrActionSet actionSet;
     
-        uint32_t priorityOverride;
+        uint priorityOverride;
     
     }
     
@@ -3809,11 +3807,11 @@ namespace fn.OpenXR.Common
     
         XrStructureType type;
     
-        const void* XR_MAY_ALIAS next;
+        IntPtr next;
     
-        uint32_t actionSetPriorityCount;
+        uint actionSetPriorityCount;
     
-        const XrActiveActionSetPriorityEXT* actionSetPriorities;
+        IntPtr actionSetPriorities;
     
     }
     
