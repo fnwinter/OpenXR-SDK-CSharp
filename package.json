@@ -1,0 +1,21 @@
+{
+  "name": "com.fnwinter.openxr_sdk_csharp",
+  "version": "0.0.1",
+  "displayName": "OpenXR-SDK-CSharp",
+  "description": "This is an example package",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "dependencies": {
+ },
+ "keywords": [
+    "openxr"
+  ],
+  "author": {
+    "name": "jungjik.lee",
+    "email": "fnwinter@gmail.com",
+    "url": "https://github.com/fnwinter/OpenXR-SDK-CSharp"
+  }
+}
