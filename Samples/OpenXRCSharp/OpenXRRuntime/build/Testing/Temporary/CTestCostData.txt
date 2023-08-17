@@ -1,0 +1,24 @@
+tests_cxx_wrappers 1 0.0121278
+tests_deque 1 0.0134198
+tests_generic_callbacks 1 0.0165615
+tests_history_buf 1 0.0169743
+tests_id_ringbuffer 1 0.0148862
+tests_input_transform 1 0.0210273
+tests_json 1 0.0143077
+tests_lowpass_float 1 0.0219381
+tests_lowpass_integer 1 0.0185612
+tests_pacing 1 0.0321999
+tests_quatexpmap 1 0.0241697
+tests_quat_change_of_basis 1 0.0245089
+tests_quat_swing_twist 1 0.0251397
+tests_rational 1 0.0211293
+tests_relation_chain 1 0.014367
+tests_vector 1 0.0188061
+tests_worker 1 0.524587
+tests_pose 1 0.0223835
+tests_vec3_angle 1 0.0226372
+tests_aux_d3d_d3d11 1 0.0274859
+tests_comp_client_d3d11 1 0.0223509
+tests_comp_client_d3d12 1 0.0199622
+tests_comp_client_vulkan 1 0.0210435
+---

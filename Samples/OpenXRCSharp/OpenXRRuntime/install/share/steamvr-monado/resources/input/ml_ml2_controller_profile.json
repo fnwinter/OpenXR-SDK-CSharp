@@ -1,0 +1,113 @@
+{
+  "json_id": "input_profile",
+  "controller_type": "monado_ml_ml2_controller",
+  "device_class": "TrackedDeviceClass_Controller",
+  "resource_root": "steamvr-monado",
+  "driver_name": "monado",
+  "input_bindingui_mode": "controller_handed",
+  "should_show_binding_errors": true,
+  "input_bindingui_left": {
+    "image": "{indexcontroller}/icons/indexcontroller_left.svg"
+  },
+  "input_bindingui_right": {
+    "image": "{indexcontroller}/icons/indexcontroller_right.svg"
+  },
+  "input_source": {
+    "/input/menu": {
+      "type": "button",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 12,
+      "click": true,
+      "touch": false
+    },
+    "/input/home": {
+      "type": "button",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 13,
+      "click": true,
+      "touch": false
+    },
+    "/input/trigger": {
+      "type": "button",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 15,
+      "click": true,
+      "touch": false
+    },
+    "/input/trackpad": {
+      "type": "trackpad",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 19
+    },
+    "/pose/grip": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 20
+    },
+    "/pose/aim": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 21
+    },
+    "/input/shoulder": {
+      "type": "button",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 22,
+      "click": true,
+      "touch": false
+    },
+    "/output/haptic": {
+      "type": "vibration",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 23
+    },
+    "/pose/palm_ext": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 25
+    },
+    "/pose/pinch_ext": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 28
+    },
+    "/pose/poke_ext": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 29
+    }
+  }
+}

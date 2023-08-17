@@ -1,0 +1,93 @@
+{
+  "json_id": "input_profile",
+  "controller_type": "monado_ext_hand_interaction_ext",
+  "device_class": "TrackedDeviceClass_Controller",
+  "resource_root": "steamvr-monado",
+  "driver_name": "monado",
+  "input_bindingui_mode": "controller_handed",
+  "should_show_binding_errors": true,
+  "input_bindingui_left": {
+    "image": "{indexcontroller}/icons/indexcontroller_left.svg"
+  },
+  "input_bindingui_right": {
+    "image": "{indexcontroller}/icons/indexcontroller_right.svg"
+  },
+  "input_source": {
+    "/pose/grip": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 9
+    },
+    "/pose/aim": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 10
+    },
+    "/input/pinch_ext": {
+      "type": "trigger",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 12,
+      "click": false,
+      "touch": false,
+      "value": true,
+      "force": false
+    },
+    "/pose/pinch_ext": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 13
+    },
+    "/input/aim_activate_ext": {
+      "type": "trigger",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 15,
+      "click": false,
+      "touch": false,
+      "value": true,
+      "force": false
+    },
+    "/input/grasp_ext": {
+      "type": "trigger",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 17,
+      "click": false,
+      "touch": false,
+      "value": true,
+      "force": false
+    },
+    "/pose/palm_ext": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 19
+    },
+    "/pose/poke_ext": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 21
+    }
+  }
+}
