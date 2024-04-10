@@ -43,13 +43,14 @@ namespace UnityEngine.XR.OpenXR.Samples.InterceptFeature
         /// <inheritdoc />
         protected override IntPtr HookGetInstanceProcAddr(IntPtr func)
         {
-            Debug.Log("EXT: registering our own xrGetInstanceProcAddr");
+            Debug.Log("EXT: registering our own xrGetInstanceProcAddr 1");
             return intercept_xrCreateSession_xrGetInstanceProcAddr(func);
         }
 
         /// <inheritdoc />
         protected override bool OnInstanceCreate(ulong xrInstance)
         {
+            Debug.Log("TEST");
             Internal_SetCallback(OnMessage);
 
             // Example of sending data set by user down to native.

@@ -138,6 +138,30 @@
       "order": 19,
       "click": true,
       "touch": false
+    },
+    "/pose/palm_ext": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 30
+    },
+    "/pose/pinch_ext": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 33
+    },
+    "/pose/poke_ext": {
+      "type": "pose",
+      "binding_image_point": [
+        0,
+        0
+      ],
+      "order": 34
     }
   }
 }
