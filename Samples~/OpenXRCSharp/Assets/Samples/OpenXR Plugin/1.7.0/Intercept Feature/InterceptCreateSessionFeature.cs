@@ -47,10 +47,12 @@ namespace UnityEngine.XR.OpenXR.Samples.InterceptFeature
             return intercept_xrCreateSession_xrGetInstanceProcAddr(func);
         }
 
+        [DllImport("openxr_loader.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "xrGetInstanceProcAddr")]
+        public static extern int xrGetInstanceProcAddr(ulong instance, [MarshalAs(UnmanagedType.LPStr)] string name, out IntPtr function);
+
         /// <inheritdoc />
         protected override bool OnInstanceCreate(ulong xrInstance)
         {
-            Debug.Log("TEST");
             Internal_SetCallback(OnMessage);
 
             // Example of sending data set by user down to native.
@@ -59,6 +61,13 @@ namespace UnityEngine.XR.OpenXR.Samples.InterceptFeature
 
             // here's one way you can grab the instance
             Debug.Log($"EXT: Got xrInstance: {xrInstance}");
+
+            // get the xrPollEvent function.
+            string functionName = "xrPollEvent";
+            IntPtr function_ptr = Marshal.AllocHGlobal(sizeof(int));
+            xrGetInstanceProcAddr(xrInstance, functionName, out function_ptr);
+            Debug.Log($"EXT: Got xrPollEvent: {function_ptr}");
+
             return true;
         }
 
